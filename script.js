@@ -1,7 +1,10 @@
 
 document.querySelectorAll('[data-wa]').forEach(el=>{
-  const msg=encodeURIComponent('שלום, הגעתי דרך אתר נץ מערכות מידע. נשמח לדבר על תהליך או פתרון שצריך לקדם.');
-  el.href='https://wa.me/972508673333?text='+msg;
+  const isEnglish=document.documentElement.lang==='en';
+  const text=isEnglish
+    ? 'Hello, I reached you through the Netz Information Systems website. I would like to discuss a process or technology solution.'
+    : 'שלום, הגעתי דרך אתר נץ מערכות מידע. נשמח לדבר על תהליך או פתרון שצריך לקדם.';
+  el.href='https://wa.me/972508673333?text='+encodeURIComponent(text);
 });
 
 const hamburger = document.querySelector('.hamburger');

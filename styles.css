@@ -93,3 +93,21 @@ footer{background:#062c4a;color:#dbe9f2;padding:20px 0}.foot{display:flex;justif
   }
   .menu a:last-child{border-bottom:0}
 }
+
+/* Bilingual language switch */
+.lang-switch{display:flex;align-items:center;gap:4px;direction:ltr;white-space:nowrap}
+.lang-switch a{display:inline-flex;align-items:center;justify-content:center;padding:7px 9px;border:1px solid var(--line);background:#fff;color:var(--navy);font-size:13px;font-weight:900}
+.lang-switch a:first-child{border-radius:8px 0 0 8px}
+.lang-switch a:last-child{border-radius:0 8px 8px 0}
+.lang-switch a.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+html[dir="ltr"] body{direction:ltr}
+html[dir="ltr"] .menu,html[dir="ltr"] .subhero,html[dir="ltr"] .card,html[dir="ltr"] .tech-line{text-align:left}
+html[dir="ltr"] .checks{padding-left:0}
+html[dir="ltr"] .checks li:before{margin-left:0;margin-right:8px}
+html[dir="ltr"] .tech-line strong{min-width:130px}
+@media(max-width:900px){
+  .lang-switch{order:3}
+  .nav{gap:8px}
+  .lang-switch a{padding:6px 7px;font-size:12px}
+  html[dir="ltr"] .menu a{text-align:left}
+}
