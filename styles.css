@@ -1,7 +1,7 @@
 
 :root{
  --navy:#082f52;--navy2:#0d527e;--blue:#1680b7;--ink:#0a3454;--orange:#f58220;
- --red:#b4151b;--green:#18a957;--bg:#f5f8fb;--line:#d9e4ec;--muted:#5b7487;
+ --red:#b4151b;--green:#55c997;--bg:#f5f8fb;--line:#d9e4ec;--muted:#5b7487;
 }
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;font-family:Arial,"Noto Sans Hebrew",sans-serif;color:var(--ink);background:var(--bg);direction:rtl;line-height:1.5}
@@ -54,3 +54,8 @@ footer{background:#062c4a;color:#dbe9f2;padding:20px 0}.foot{display:flex;justif
  .pain,.steps{grid-template-columns:repeat(2,1fr)}.hero{min-height:auto}.hero .inner{padding:44px 0}.hero p{font-size:18px}
  .logo img{height:56px}.wa{font-size:13px;padding:10px 12px}.title,.subhero h1,.cta h2{white-space:normal}
 }
+
+.tech-lines{margin-top:14px;border-top:1px solid var(--line)}
+.tech-line{display:flex;align-items:baseline;gap:12px;padding:9px 0;border-bottom:1px solid var(--line)}
+.tech-line strong{min-width:115px;color:var(--navy);font-size:16px}
+.tech-line span{color:#49687c}
