@@ -1,19 +1,2 @@
-const menuBtn = document.querySelector('.menu-btn');
-const navLinks = document.querySelector('.nav-links');
-if (menuBtn && navLinks) {
-  menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
-}
-
-const contactForm = document.querySelector('#contact-form');
-if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const data = new FormData(contactForm);
-    const name = data.get('name') || '';
-    const phone = data.get('phone') || '';
-    const message = data.get('message') || '';
-    const text = `שלום ניסים, שמי ${name}. טלפון: ${phone}. ${message}`;
-    const whatsappUrl = `https://wa.me/972508673333?text=${encodeURIComponent(text)}`;
-    window.open(whatsappUrl, '_blank');
-  });
-}
+const menuBtn=document.querySelector('.menu-btn');const navLinks=document.querySelector('.nav-links');if(menuBtn&&navLinks){menuBtn.addEventListener('click',()=>navLinks.classList.toggle('open'));}
+const f=document.querySelector('#contact-form');if(f){f.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(f);const text=`שלום ניסים, שמי ${d.get('name')}. הטלפון שלי: ${d.get('phone')}. ${d.get('message')||''}`;window.open(`https://wa.me/972508673333?text=${encodeURIComponent(text)}`,'_blank','noopener');});}
