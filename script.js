@@ -1,2 +1,7 @@
-const menuBtn=document.querySelector('.menu-btn');const navLinks=document.querySelector('.nav-links');if(menuBtn&&navLinks){menuBtn.addEventListener('click',()=>navLinks.classList.toggle('open'));}
-const f=document.querySelector('#contact-form');if(f){f.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(f);const text=`שלום ניסים, שמי ${d.get('name')}. הטלפון שלי: ${d.get('phone')}. ${d.get('message')||''}`;window.open(`https://wa.me/972508673333?text=${encodeURIComponent(text)}`,'_blank','noopener');});}
+
+document.querySelectorAll('[data-wa]').forEach(el=>{
+ el.addEventListener('click',e=>{
+   const msg=encodeURIComponent('שלום, הגעתי דרך אתר נץ מערכות מידע. נשמח לדבר על תהליך שצריך לייעל.');
+   el.href='https://wa.me/972508673333?text='+msg;
+ });
+});
