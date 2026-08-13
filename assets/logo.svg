@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="92" viewBox="0 0 360 92">
+<rect width="360" height="92" rx="18" fill="#ffffff"/>
+<g transform="translate(20,13)">
+  <path d="M16 34 C42 8,70 5,95 14 C77 17,62 26,54 38 C70 31,87 30,104 35 C83 41,66 52,52 67 C42 54,31 44,16 34Z" fill="#0b4f79"/>
+  <path d="M54 38 C72 18,94 12,118 16 C102 22,88 31,78 43 C92 40,106 42,120 48 C101 51,84 58,69 70 C65 57,61 47,54 38Z" fill="#1675a8"/>
+  <circle cx="111" cy="25" r="5" fill="#f5a623"/>
+</g>
+<text x="335" y="43" font-family="Arial, sans-serif" font-size="34" font-weight="800" fill="#07365d" text-anchor="end">נץ מערכות מידע</text>
+<text x="335" y="68" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#1675a8" text-anchor="end">ייעוץ • תהליכים • AI • CIO</text>
+</svg>
