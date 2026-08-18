@@ -137,3 +137,63 @@ header{border-bottom:1px solid #edf3f6}.nav{height:86px}.logo img{height:82px}
  .page-cta{padding:20px 14px}.foot{justify-content:center;text-align:center}.foot img{height:58px}
  html[dir="ltr"] .menu{direction:ltr}
 }
+
+/* V4 — approved white/orange visual refresh. Content remains unchanged. */
+:root{--navy:#073b66;--navy2:#0a4f7d;--blue:#1680b7;--orange:#ff6b0b;--orange2:#ff9a43;--green:#25c97c;--bg:#fff;--line:#e7edf2;--muted:#60788b}
+body{background:#fff;color:var(--ink)}
+header{background:#fff;box-shadow:0 2px 18px #0b31500d;border-bottom:1px solid #edf1f4}
+.menu a:hover{color:var(--orange)}
+.hero{color:var(--navy);background:#fff;min-height:430px;border-bottom:1px solid #f1f3f5}
+.hero:before{background:radial-gradient(circle at 12% 25%,#ff6b0b12 0 2px,transparent 3px),radial-gradient(circle at 84% 30%,#073b660d 0 2px,transparent 3px);background-size:72px 72px,96px 96px;opacity:.65}
+.hero:after{width:430px;height:430px;background:linear-gradient(145deg,#ff6b0b18,#ff9a4305);left:-190px;bottom:-310px;border:2px solid #ff6b0b10}
+.hero h1{color:var(--navy)}.hero h1 span{color:var(--orange)}.hero p{color:#3e5c70}
+.benefits span:before{color:var(--orange)}
+.section,.section.white{background:#fff}.title{color:var(--navy)}
+.card{background:#fff;border:1px solid #e7edf2;box-shadow:0 10px 26px #073b660c}.card:hover{box-shadow:0 15px 34px #073b6617}
+.icon{background:#fff4eb;color:var(--orange)}
+.process{background:#fff;color:var(--navy);border-top:1px solid #edf1f4;border-bottom:1px solid #edf1f4}
+.process .num,.num{background:linear-gradient(135deg,var(--orange),var(--orange2));color:#fff;border:0;box-shadow:0 7px 16px #ff6b0b24}
+.process .step:nth-child(2n) .num,.process .step:nth-child(3n) .num{background:linear-gradient(135deg,var(--orange),var(--orange2));color:#fff;border:0}
+.band{background:#fff8f2;border-color:#ffe1cc;color:var(--navy)}
+.subhero{background:linear-gradient(120deg,#fff,#fff8f2);color:var(--navy);border-bottom:1px solid #f0e6df}.subhero:after{background:#ff6b0b12}
+.cta{background:linear-gradient(110deg,#ff5f00,#ff861e);color:#fff}.cta .wa{background:#fff;color:#e85b00;box-shadow:none}
+.page-cta{background:linear-gradient(120deg,#fff8f2,#fff);border-color:#ffe0ca}
+.faq-list details{background:#fff;border-color:#e7edf2}
+footer{background:#fff7f1;color:var(--navy);border-top:1px solid #ffe4d2}
+.foot img{background:#fff}
+.cio-specialties{background:linear-gradient(100deg,#ff5f00,#ff8b24);box-shadow:0 10px 24px #ff6b0b22}
+.wa{background:linear-gradient(135deg,#20b86e,#3fd58f)}
+.lang-switch a.active{background:var(--orange);border-color:var(--orange);color:#fff}
+.hamburger span{background:var(--navy)}
+@media(max-width:900px){
+ .nav{direction:ltr;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:8px}
+ .hamburger{display:block;order:0;grid-column:1;grid-row:1;justify-self:start}
+ .lang-switch{order:0;grid-column:2;grid-row:1;justify-self:center;margin:0}
+ .logo{order:0;grid-column:3;grid-row:1;justify-self:end}
+ .menu{top:71px;right:0;left:0;direction:rtl}
+ html[dir="ltr"] .nav{direction:rtl}
+ html[dir="ltr"] .hamburger{grid-column:3;justify-self:end}
+ html[dir="ltr"] .logo{grid-column:1;justify-self:start}
+ html[dir="ltr"] .lang-switch{grid-column:2}
+ html[dir="ltr"] .menu{direction:ltr}
+ .hero{min-height:auto}.hero .inner{padding:36px 0}
+ .services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* V5 — mobile hierarchy + final review fixes */
+@media(max-width:900px){
+  /* Hebrew: hamburger right, logo left, language control between them. */
+  html[dir="rtl"] .nav{direction:rtl;display:grid;grid-template-columns:auto 1fr auto;align-items:center}
+  html[dir="rtl"] .hamburger{grid-column:3;grid-row:1;justify-self:end}
+  html[dir="rtl"] .logo{grid-column:1;grid-row:1;justify-self:start}
+  html[dir="rtl"] .lang-switch{grid-column:2;grid-row:1;justify-self:center}
+  /* English mirrors Hebrew. */
+  html[dir="ltr"] .nav{direction:ltr;display:grid;grid-template-columns:auto 1fr auto;align-items:center}
+  html[dir="ltr"] .hamburger{grid-column:1;grid-row:1;justify-self:start}
+  html[dir="ltr"] .logo{grid-column:3;grid-row:1;justify-self:end}
+  html[dir="ltr"] .lang-switch{grid-column:2;grid-row:1;justify-self:center}
+  .hamburger{z-index:3}
+  .logo img{max-width:190px;width:auto;height:58px}
+  .menu{top:71px}
+  .services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
