@@ -197,3 +197,13 @@ footer{background:#fff7f1;color:var(--navy);border-top:1px solid #ffe4d2}
   .menu{top:71px}
   .services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
+
+/* V6 — definitive responsive header placement. Content and About image unchanged. */
+@media(max-width:900px){
+  html[dir="rtl"] .nav{direction:rtl;grid-template-columns:auto 1fr auto}
+  html[dir="rtl"] .hamburger{grid-column:3!important;justify-self:end!important}
+  html[dir="rtl"] .logo{grid-column:1!important;justify-self:start!important}
+  html[dir="ltr"] .nav{direction:ltr;grid-template-columns:auto 1fr auto}
+  html[dir="ltr"] .hamburger{grid-column:1!important;justify-self:start!important}
+  html[dir="ltr"] .logo{grid-column:3!important;justify-self:end!important}
+}
