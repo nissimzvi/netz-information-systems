@@ -207,3 +207,15 @@ footer{background:#fff7f1;color:var(--navy);border-top:1px solid #ffe4d2}
   html[dir="ltr"] .hamburger{grid-column:1!important;justify-self:start!important}
   html[dir="ltr"] .logo{grid-column:3!important;justify-self:end!important}
 }
+
+/* V7 — mobile header correction only; V6 logo is unchanged. */
+@media(max-width:900px){
+  html[dir="rtl"] .nav{direction:ltr!important;display:grid!important;grid-template-columns:auto 1fr auto!important}
+  html[dir="rtl"] .hamburger{grid-column:3!important;grid-row:1!important;justify-self:end!important}
+  html[dir="rtl"] .logo{grid-column:1!important;grid-row:1!important;justify-self:start!important}
+  html[dir="rtl"] .lang-switch{grid-column:2!important;grid-row:1!important;justify-self:center!important}
+  html[dir="ltr"] .nav{direction:ltr!important;display:grid!important;grid-template-columns:auto 1fr auto!important}
+  html[dir="ltr"] .hamburger{grid-column:1!important;grid-row:1!important;justify-self:start!important}
+  html[dir="ltr"] .logo{grid-column:3!important;grid-row:1!important;justify-self:end!important}
+  html[dir="ltr"] .lang-switch{grid-column:2!important;grid-row:1!important;justify-self:center!important}
+}
