@@ -1,20 +1,6 @@
-# נץ מערכות מידע — V12
+# NETZ WEBSITE V14
 
-גרסה להעלאה ל-GitHub Pages.
+Based on V13.
 
-- מבוססת על מבנה V7 הקיים.
-- פלטת ירוק-יער וזהב-ברונזה.
-- כותרות Frank Ruhl Libre וטקסט Heebo.
-- תמונת ניסים צבי מופיעה רק בדף אודות.
-- בדף הבית מופיעה המחשה קטנה של מחשב וקפה.
-- כל כרטיסי השירות לחיצים ומובילים לדף פירוט.
-- בכל דף פירוט: WhatsApp וחזרה לשירותים.
-- עברית/אנגלית והמבורגר נשמרו.
-- לחיצה על הלוגו מחזירה לדף הבית.
-
-
-## V13
-- מבוסס על V12.
-- תמונת Hero אמיתית של מחשב וקפה, עם לוגו נץ מערכות מידע מטושטש ועדין בתוך מסך המחשב.
-- תמונת ניסים נשארת בדף אודות בלבד.
-- הרחבת פירוט PUDO ולוגיסטיקה: הקמה מאפס, ליווי, הטמעה ומומחיות עמוקה בתחום.
+Fix: the homepage workspace image is embedded directly in index.html and index-en.html so it cannot break if the assets folder is uploaded incorrectly.
+The portrait remains on the About page only.
