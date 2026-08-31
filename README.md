@@ -1,6 +1,12 @@
-# NETZ WEBSITE V14
+# NETZ Website V15
 
-Based on V13.
+מבוסס על V14.
 
-Fix: the homepage workspace image is embedded directly in index.html and index-en.html so it cannot break if the assets folder is uploaded incorrectly.
-The portrait remains on the About page only.
+שינויים ב-V15:
+- רספונסיביות מקצועית למובייל.
+- בעברית ההמבורגר נמצא בצד ימין.
+- באנגלית הפריסה ממורכזת/ממוזערת באופן תואם LTR.
+- תפריט המובייל נפתח כרוחב מסך מלא ובגובה המסך הזמין.
+- מניעת גלילה אופקית וחריגה מרוחב המסך.
+- התאמת גודל הלוגו, הכותרות, הכפתורים, התמונה והכרטיסים למסכים קטנים.
+- כל שאר התוכן, הלוגו, הצבעים, הקישורים, עברית/אנגלית ודפי הפירוט נשמרו מהגרסה האחרונה.
