@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://netzcio.co.il/sitemap.xml

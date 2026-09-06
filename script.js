@@ -62,3 +62,24 @@ const details={
  const he=document.getElementById('detail-lang-he'); if(he) he.href='service-detail.html?service='+encodeURIComponent(key);
  const back=document.querySelector('[data-back]'); if(back) back.addEventListener('click',()=>location.href=(lang==='en'?'services-en.html':'services.html'));
 })();
+
+
+// V17 compact accessibility control - starts in the approved default design on every page load.
+(function(){
+ const isEn=document.documentElement.lang==='en';
+ const labels=isEn?{open:'Accessibility options',title:'Accessibility',text:'Text size',contrast:'High contrast',links:'Underline links',readable:'Readable font',reset:'Reset',note:'Changes apply only to this open page.'}:{open:'אפשרויות נגישות',title:'נגישות',text:'גודל טקסט',contrast:'ניגודיות גבוהה',links:'הדגשת קישורים',readable:'פונט קריא',reset:'איפוס',note:'השינויים חלים רק בדף הפתוח.'};
+ const icon='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2a2.2 2.2 0 1 1 0 4.4 2.2 2.2 0 0 1 0-4.4ZM4 7.6a1.2 1.2 0 0 1 1.4-.9c4.5 1.1 8.7 1.1 13.2 0a1.2 1.2 0 1 1 .6 2.3c-1.7.4-3.4.7-5.1.8v3l2.8 6a1.2 1.2 0 1 1-2.2 1l-2.7-5.7-2.7 5.7a1.2 1.2 0 1 1-2.2-1l2.8-6v-3A28 28 0 0 1 4.9 9 1.2 1.2 0 0 1 4 7.6Z"/></svg>';
+ const btn=document.createElement('button'); btn.type='button'; btn.className='a11y-trigger'; btn.setAttribute('aria-label',labels.open); btn.setAttribute('aria-expanded','false'); btn.setAttribute('aria-controls','a11y-panel'); btn.innerHTML=icon;
+ const panel=document.createElement('div'); panel.id='a11y-panel'; panel.className='a11y-panel'; panel.setAttribute('role','dialog'); panel.setAttribute('aria-label',labels.title); panel.innerHTML='<h2>'+labels.title+'</h2><div class="a11y-grid"><button class="a11y-option" data-a11y="text" type="button">'+labels.text+'</button><button class="a11y-option" data-a11y="contrast" type="button">'+labels.contrast+'</button><button class="a11y-option" data-a11y="links" type="button">'+labels.links+'</button><button class="a11y-option" data-a11y="readable" type="button">'+labels.readable+'</button><button class="a11y-option a11y-reset" data-a11y="reset" type="button">'+labels.reset+'</button></div><p class="a11y-note">'+labels.note+'</p>';
+ document.body.append(btn,panel);
+ const root=document.documentElement; let state={text:0,contrast:false,links:false,readable:false};
+ const apply=()=>{root.classList.toggle('a11y-large',state.text===1);root.classList.toggle('a11y-xlarge',state.text===2);root.classList.toggle('a11y-contrast',!!state.contrast);root.classList.toggle('a11y-links',!!state.links);root.classList.toggle('a11y-readable',!!state.readable);panel.querySelector('[data-a11y="contrast"]').setAttribute('aria-pressed',String(!!state.contrast));panel.querySelector('[data-a11y="links"]').setAttribute('aria-pressed',String(!!state.links));panel.querySelector('[data-a11y="readable"]').setAttribute('aria-pressed',String(!!state.readable));panel.querySelector('[data-a11y="text"]').setAttribute('aria-pressed',String(state.text>0));};
+ apply();
+ const close=()=>{panel.classList.remove('open');btn.setAttribute('aria-expanded','false')};
+ btn.addEventListener('click',()=>{const open=panel.classList.toggle('open');btn.setAttribute('aria-expanded',String(open));if(open){const first=panel.querySelector('button');if(first)first.focus()}});
+ panel.addEventListener('click',e=>{const b=e.target.closest('[data-a11y]');if(!b)return;const a=b.dataset.a11y;if(a==='text')state.text=(state.text+1)%3;else if(a==='reset')state={text:0,contrast:false,links:false,readable:false};else state[a]=!state[a];apply()});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&panel.classList.contains('open')){close();btn.focus()}});
+ document.addEventListener('click',e=>{if(panel.classList.contains('open')&&!panel.contains(e.target)&&!btn.contains(e.target))close()});
+})();
+
+const skip=document.querySelector('.skip-link'); if(skip){skip.addEventListener('click',()=>{const main=document.getElementById('main-content');if(main)setTimeout(()=>main.focus(),0)})}

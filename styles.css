@@ -124,3 +124,24 @@ html[dir='ltr'] body{direction:ltr}html[dir='ltr'] .menu,html[dir='ltr'] .subher
  .hero-actions .wa,.hero-actions .btn{width:100%;padding-inline:10px}
  .steps{grid-template-columns:1fr 1fr}
 }
+
+
+/* V17 - accessibility layer. These rules do not alter the approved V15 design by default. */
+.skip-link{position:fixed;z-index:9999;top:8px;inset-inline-start:12px;transform:translateY(-180%);background:#fff;color:var(--forest);border:2px solid var(--gold);padding:9px 13px;border-radius:7px;font-weight:800;box-shadow:var(--shadow)}
+.skip-link:focus{transform:translateY(0)}
+:focus-visible{outline:3px solid #b7893e;outline-offset:3px}
+.footer-legal{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.footer-legal a{text-decoration:underline;text-underline-offset:3px}
+.legal-page{max-width:900px}.legal-page h2{font-size:30px;margin:30px 0 10px}.legal-page p,.legal-page li{font-size:17px}.legal-page a{text-decoration:underline;color:var(--forest);font-weight:700}
+.a11y-trigger{position:fixed;z-index:95;bottom:max(18px,env(safe-area-inset-bottom));inset-inline-start:18px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.7);background:var(--forest);color:#fff;display:grid;place-items:center;box-shadow:0 8px 24px rgba(15,47,37,.18);cursor:pointer;padding:0}
+.a11y-trigger:hover,.a11y-trigger:focus-visible{background:var(--forest2)}
+.a11y-trigger svg{width:23px;height:23px;fill:currentColor}
+.a11y-panel{position:fixed;z-index:96;bottom:max(70px,calc(env(safe-area-inset-bottom) + 66px));inset-inline-start:18px;width:min(290px,calc(100vw - 36px));background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 18px 46px rgba(15,47,37,.18);padding:15px;display:none;color:var(--ink)}
+.a11y-panel.open{display:block}.a11y-panel h2{font:800 19px 'Heebo',Arial,sans-serif;color:var(--forest);margin:0 0 11px}.a11y-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.a11y-option{border:1px solid var(--line);background:var(--cream);color:var(--forest);border-radius:8px;padding:9px 8px;font:700 13px 'Heebo',Arial,sans-serif;cursor:pointer}.a11y-option[aria-pressed='true']{background:var(--forest);color:#fff;border-color:var(--forest)}.a11y-reset{grid-column:1/-1;background:#fff}.a11y-note{font-size:11px;color:var(--muted);margin:9px 0 0}
+/* Accessibility modes only after the visitor chooses them */
+html.a11y-large .hero-copy,html.a11y-large .section,html.a11y-large .subhero,html.a11y-large footer{font-size:108%}
+html.a11y-xlarge .hero-copy,html.a11y-xlarge .section,html.a11y-xlarge .subhero,html.a11y-xlarge footer{font-size:116%}
+html.a11y-links main a,html.a11y-links footer a{text-decoration:underline!important;text-decoration-thickness:2px!important;text-underline-offset:3px!important}
+html.a11y-readable main,html.a11y-readable main h1,html.a11y-readable main h2,html.a11y-readable main h3{font-family:Arial,'Heebo',sans-serif!important}
+html.a11y-contrast body{background:#fff;color:#000}html.a11y-contrast main .hero,html.a11y-contrast main .process,html.a11y-contrast main .subhero,html.a11y-contrast main .section,html.a11y-contrast main .card,html.a11y-contrast main .detail-card,html.a11y-contrast main .detail-side,html.a11y-contrast main .page-cta{background:#fff!important;color:#000!important}html.a11y-contrast main h1,html.a11y-contrast main h2,html.a11y-contrast main h3,html.a11y-contrast main p,html.a11y-contrast main span,html.a11y-contrast main li{color:#000!important}html.a11y-contrast main a{color:#000!important;text-decoration:underline}html.a11y-contrast main .wa,html.a11y-contrast main .btn{background:#000!important;color:#fff!important;border-color:#000!important}
+@media(max-width:600px){.a11y-trigger{width:42px;height:42px;inset-inline-start:12px;bottom:max(12px,env(safe-area-inset-bottom))}.a11y-panel{inset-inline-start:12px;width:min(280px,calc(100vw - 24px));bottom:max(62px,calc(env(safe-area-inset-bottom) + 60px));padding:13px}.a11y-grid{grid-template-columns:1fr}.a11y-reset{grid-column:auto}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}

@@ -1,12 +1,12 @@
-# NETZ Website V15
+# NETZ Website V17
 
-מבוסס על V14.
+Based directly on the approved V15 visual design.
 
-שינויים ב-V15:
-- רספונסיביות מקצועית למובייל.
-- בעברית ההמבורגר נמצא בצד ימין.
-- באנגלית הפריסה ממורכזת/ממוזערת באופן תואם LTR.
-- תפריט המובייל נפתח כרוחב מסך מלא ובגובה המסך הזמין.
-- מניעת גלילה אופקית וחריגה מרוחב המסך.
-- התאמת גודל הלוגו, הכותרות, הכפתורים, התמונה והכרטיסים למסכים קטנים.
-- כל שאר התוכן, הלוגו, הצבעים, הקישורים, עברית/אנגלית ודפי הפירוט נשמרו מהגרסה האחרונה.
+Changes only:
+- compact accessibility control, inactive by default and not persisted
+- keyboard focus and skip-to-content support
+- accessibility and privacy pages
+- legal footer links
+- SEO metadata, robots.txt and sitemap.xml
+
+The approved layout, colors, typography, hero image dimensions, navigation and responsive behavior are preserved from V15.
